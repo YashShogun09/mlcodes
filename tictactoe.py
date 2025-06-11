@@ -1,7 +1,5 @@
-# Initial board shows position numbers
-board = [' '] + [str(i) for i in range(1, 10)]  # index 1-9 used
+board = [' '] + [str(i) for i in range(1, 10)]  
 
-# Winning positions
 wins = [
     [1,2,3], [4,5,6], [7,8,9],  # rows
     [1,4,7], [2,5,8], [3,6,9],  # columns
@@ -43,4 +41,4 @@ for i in range(9):
     player = 2 if player == 1 else 1
 else:
     show()
-    print("🤝 It's a draw!")
+    print("It's a draw!")
