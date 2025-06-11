@@ -1,14 +1,13 @@
 def build_tree(leaves, branching_factor):
-  
-    if len(leaves) == 1:
-        return leaves[0]
+   
+    if len(leaves) <= branching_factor:
+        return leaves  # Smallest group — base case
 
     tree = []
     for i in range(0, len(leaves), branching_factor):
         subtree = build_tree(leaves[i:i + branching_factor], branching_factor)
         tree.append(subtree)
     return tree
-
 
 def alpha_beta(node, depth, alpha, beta, maximizing_player):
     if depth == 0 or isinstance(node, int):
